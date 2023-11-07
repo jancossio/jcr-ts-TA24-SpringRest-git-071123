@@ -14,8 +14,8 @@ public class Empleado {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	@Column(name="nomApel")
-	private String nomApel;
+	@Column(name="nom_Apel")
+	private String nom_Apel;
 	private ClasesTrabajo trabajo;
 	private int salario;
 	
@@ -32,7 +32,7 @@ public class Empleado {
 	public Empleado(int id, String nomApel, ClasesTrabajo trabajo) {
 		super();
 		this.id = id;
-		this.nomApel = nomApel;
+		this.nom_Apel = nomApel;
 		this.trabajo = trabajo;
 		this.salario = determinarSalario(trabajo);
 	}
@@ -71,11 +71,11 @@ public class Empleado {
 	}
 
 	public String getNomApel() {
-		return nomApel;
+		return nom_Apel;
 	}
 
 	public void setNomApel(String nombre) {
-		this.nomApel = nombre;
+		this.nom_Apel = nombre;
 	}
 
 	public ClasesTrabajo getTrabajo() {
@@ -96,7 +96,7 @@ public class Empleado {
 
 	@Override
 	public String toString() {
-		return "Empleado [id=" + id + ", nomApel=" + nomApel + ", trabajo=" + trabajo + ", salario=" + salario + "]";
+		return "Empleado [id=" + id + ", nomApel=" + nom_Apel + ", trabajo=" + trabajo + ", salario=" + salario + "]";
 	}
 
 

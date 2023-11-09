@@ -55,6 +55,9 @@ public class EmpleadoController {
 		empleado_seleccionado = empleadoServiceImpl.empleadoXID(id);
 		
 		empleado_seleccionado.setNomApel(empleado.getNomApel());
+		empleado_seleccionado.setTrabajo(ClasesTrabajo.valueOf(empleado.getTrabajo().toString()));
+		empleado_seleccionado.setSalario(empleado.determinarSalario(empleado.getTrabajo()));
+
 		
 		empleado_actualizado = empleadoServiceImpl.actualizarEmpleado(empleado_seleccionado);
 		return empleado_actualizado;

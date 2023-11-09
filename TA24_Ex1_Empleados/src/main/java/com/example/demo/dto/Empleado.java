@@ -17,6 +17,7 @@ public class Empleado {
 	@Column(name="nom_Apel")
 	private String nom_Apel;
 	private ClasesTrabajo trabajo;
+	@Column(name="salario")
 	private int salario;
 	
 	public enum ClasesTrabajo{
